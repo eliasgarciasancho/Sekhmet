@@ -1,0 +1,506 @@
+/* Generales */
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    background-color: #E6D09A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    user-select: none;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Fondo */
+
+#imagenFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/fondoPiramide.jpg");
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#colorFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #E6D09A;
+    z-index: -2;
+}
+
+#menuFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -3;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h4 {
+    margin-left: 40px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+header img {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* Panel info */
+
+#info {
+    position: absolute;
+    width: 80vw;
+    padding: 30px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    z-index: 15;
+    display: none;
+}
+
+#info #cerrarInfo {
+    position: absolute;
+    padding: 10px;
+    background-color: #984E15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+footer > ul#menuPrincipal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconoMenu {
+    flex-basis: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.iconoMenu h6 {
+    margin-left: 10px;
+    font-size: 16px;
+    color: black;
+    opacity: 0.3;
+}
+
+.iconoMenu#piramide h6 {
+    color: #984E15;
+    opacity: 1;
+}
+
+
+/* Menú extra */
+
+li.iconoMenu#menuMas {
+    background-color: #984E15;
+    position: relative;
+    transform-origin: right top;
+}
+
+ul#menuExtra {
+    padding: 0;
+    transform-origin: right bottom;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    right: 0;
+    margin: 0;
+    bottom: 55px;
+    display: none;
+}
+
+ul#menuExtra li {
+    list-style: none;
+    font-size: 16px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    border-bottom: none;
+    width: 25vw;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul#menuExtra a li:hover {
+    background-color: #E6D09A;
+}
+
+ul#menuExtra a {
+    text-decoration: none;
+    color: #984E15;
+}
+
+
+/* PIRÁMIDE */
+
+section#piramide {
+    width: 500px;
+    height: 350px;
+    background-color: white;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(6, 1fr) 1.5fr;
+    grid-template-rows: 1.2fr repeat(3, 1fr);
+    position: relative;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+section#piramide div.item {
+    border: 1px solid #984E15;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section#piramide div.item div.tick {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1.5px solid #984E15;
+    background-color: #E6D09A;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+}
+
+section#piramide div.item.itemActivo div.tick {
+    background-color: #984E15;
+}
+
+section#piramide div.item.itemActivo {
+    background-color: #E6D09A;
+}
+
+section#piramide div.item#mascara {
+    grid-column: 3 / 7;
+    border-top: none;
+}
+
+section#piramide div.item#mascara div.tick {
+    right: 63px;
+}
+
+section#piramide div.item#cruz {
+    grid-column: 2 / 5;
+}
+
+section#piramide div.item#ojo {
+    grid-column: 5 / 8;
+}
+
+section#piramide div.item#ojo div.tick {
+    right: 59px;
+}
+
+section#piramide div.item#testamento {
+    grid-column: 1 / 4;
+}
+
+section#piramide div.item#papiro {
+    grid-column: 4 / 6;
+}
+
+section#piramide div.item#lapida {
+    grid-column: 6 / 9;
+}
+
+section#piramide div.item#lapida div.tick {
+    right: 82px;
+}
+
+section#piramide div.item#anfora {
+    grid-column: 1 / 3;
+    border-bottom: none;
+}
+
+section#piramide div.item#flor {
+    grid-column: 3 / 5;
+    border-bottom: none;
+}
+
+section#piramide div.item#alfombra {
+    grid-column: 5 / 7;
+    border-bottom: none;
+}
+
+section#piramide div.item#varas {
+    grid-column: 7 / 9;
+    border-bottom: none;
+}
+
+section#piramide div.item#varas div.tick {
+    right: 22px;
+}
+
+
+/* Ajustar posición img dentro de sus respectivas casillas, así como la posición de los ticks */
+
+section#piramide div.item > img {
+    transform: scale(0.7);
+}
+
+section#piramide div.item#mascara > img {
+    margin-top: 8%;
+}
+
+section#piramide div.item#cruz > img {
+    margin-right: -45%;
+}
+
+section#piramide div.item#ojo > img {
+    margin-left: -50%;
+}
+
+section#piramide div.item#testamento > img {
+    margin-right: -50%;
+}
+
+section#piramide div.item#lapida > img {
+    margin-left: -50%;
+}
+
+section#piramide div.item#anfora > img {
+    margin-right: -30%;
+}
+
+section#piramide div.item#varas > img {
+    margin-left: -30%;
+} 
+
+
+/* PANEL INFORMACIÓN */
+
+section#panel {
+    margin-bottom: 70px;
+    width: 288px;
+    height: 168px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  Información inicial */
+
+section#panel.infoInicial h5 {
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.3;
+}
+
+section#panel.infoInicial {
+    padding: 30px;
+}
+
+section#panel.infoInicial div#adquirirItem {
+    display: none;
+}
+
+/* Estructura panel recurso */
+
+section#panel.infoItem h5 {
+    display: none;
+}
+
+section#panel.infoItem div#adquirirItem > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#panel.infoItem div#adquirirItem {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+section#panel.infoItem div#adquirirItem div#imagenItem {
+    grid-row: 1 / 3;
+}
+
+section#panel.infoItem div#adquirirItem div#botonContainer {
+    grid-column: 4 / 5;
+}
+
+section#panel.infoItem div#adquirirItem div#imagenItem h2 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+section#panel.infoItem div#adquirirItem div#imagenItem img {
+    margin-top: 20px;
+}
+
+section#panel.infoItem div#adquirirItem h4 {
+    font-size: 16px;
+    margin: 7px;
+}
+
+section#panel.infoItem div#adquirirItem div#rol {
+    margin-top: 12px;
+}
+
+section#panel.infoItem div#adquirirItem div#rol h6 {
+    margin: 3px;
+    margin-bottom: 0;
+}
+
+section#panel.infoItem div#adquirirItem div#rol h4 {
+    margin-top: 3px;
+}
+
+
+section#panel.infoItem div#adquirirItem div#botonContainer div#boton {
+    width: 42px;
+    height: 42px;
+    background-color: #984E15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section#panel.infoItem div#adquirirItem div#botonContainer div#boton.insuficiente {
+    opacity: 0.4;
+    cursor: auto;
+}
+
+section#panel.infoItem div#adquirirItem div#botonContainer div#boton.adquirido {
+    border: 1.5px solid #984E15;
+    background: none;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Media queries - RWD */
+
+@media (max-width: 900px ) {
+
+    .iconoMenu ul#menuExtra li {
+        width: 100vw;
+    }
+
+    .iconoMenu ul#menuExtra a:last-of-type li {
+        border-bottom: 1.5px solid #984E15;
+    }
+
+}
+
+
+@media (max-width: 550px ) {
+
+    body {
+        overflow: hidden;
+    }
+
+    section#piramide {
+        transform: scale(0.67);
+    }
+
+    section#panel {
+        transform: scale(0.9);
+        margin-bottom: 120px;
+    }
+
+    .iconoMenu {
+        flex-direction: column;
+    }
+
+    .iconoMenu h6 {
+        margin: 0;
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 359px ) {
+
+    section#piramide {
+        margin-top: 10px;
+    }
+
+    section#panel {
+        margin-bottom: 70px;
+    }
+
+}
+

@@ -1,0 +1,371 @@
+/* Generales */
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    background-color: #E6D09A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    user-select: none;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo */
+
+#imagenFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/fondoPoblacion.jpg");
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#colorFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #E6D09A;
+    z-index: -2;
+}
+
+#menuFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -3;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h4 {
+    margin-left: 40px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+header img {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* Panel info */
+
+#info {
+    position: absolute;
+    width: 80vw;
+    padding: 30px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    z-index: 15;
+    display: none;
+}
+
+#info #cerrarInfo {
+    position: absolute;
+    padding: 10px;
+    background-color: #984E15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+footer > ul#menuPrincipal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconoMenu {
+    flex-basis: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 25vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.iconoMenu h6 {
+    margin-left: 10px;
+    font-size: 16px;
+    color: black;
+    opacity: 0.3;
+}
+
+.iconoMenu#sociedad h6 {
+    color: #984E15;
+    opacity: 1;
+}
+
+
+/* Menú extra */
+
+li.iconoMenu#menuMas {
+    background-color: #984E15;
+    position: relative;
+    transform-origin: right top;
+}
+
+ul#menuExtra {
+    padding: 0;
+    transform-origin: right bottom;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    right: 0;
+    margin: 0;
+    bottom: 55px;
+    display: none;
+}
+
+ul#menuExtra li {
+    list-style: none;
+    font-size: 16px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    border-bottom: none;
+    width: 25vw;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul#menuExtra a li:hover {
+    background-color: #E6D09A;
+}
+
+ul#menuExtra a {
+    text-decoration: none;
+    color: #984E15;
+}
+
+
+/* SOCIEDAD */
+
+/* Menú principal rol */
+
+#sociedad ul.listaRoles {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#sociedad ul.listaRoles li.rol {
+    margin-bottom: 25px;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+    border: 1.5px solid #984E15;
+}
+
+#sociedad ul.listaRoles li.rol:last-of-type {
+    margin-bottom: 0;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol {
+    width: 240px;
+    height: 38px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.imagenRol {
+    width: 20%;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.nombreRol {
+    width: 44%;
+    font-size: 16px;
+    justify-content: flex-start;
+    padding-left: 12px;
+    color: #984E15;
+    border: 1px solid #984E15;
+    border-top: none;
+    border-bottom: none;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.cantidadRol {
+    width: 20%;
+    font-size: 24px;
+    color: #984E15;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol {
+    width: 16%;
+    background-color: #984E15;
+    position: relative;
+    transform-origin: right bottom;
+    cursor: pointer;
+    border-left: 1.5px solid #984E15;
+}
+
+/* Menú desplegable rol */
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol {
+    width: 243px;
+    height: 52px;
+    padding: 0;
+    position: absolute;
+    top: 38px;
+    right: -2px;
+    background-color: white;
+    transform-origin: right top;
+    border: 1.5px solid #984E15;
+    /* display: flex; */
+    align-items: center;
+    cursor: auto;
+    display:none;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol li.desplegableRecurso {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 15%;
+    border: none;
+    height: 32px;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol li.desplegableRecurso h6 {
+    font-size: 12px;
+    margin: 0;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol li.gestionarRol {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5px;
+    border: none;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol li.gestionarRol div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol li.gestionarRol div.disminuirRol {
+    height: 32px;
+    width: 32px;
+    border: 2px solid #984E15;
+}
+
+#sociedad ul.listaRoles li.rol ul.elementosRol li.desplegableRol ul.extraRol li.gestionarRol div.aumentarRol {
+    height: 32px;
+    width: 32px;
+    border: 2px solid #984E15;
+    background-color: #984E15;
+}
+
+/* Media queries - RWD */
+
+@media (max-width: 900px ) {
+
+    .iconoMenu ul#menuExtra li {
+        width: 100vw;
+    }
+    
+    .iconoMenu ul#menuExtra a:last-of-type li {
+        border-bottom: 1.5px solid #984E15;
+    }
+
+}
+
+
+@media (max-width: 550px ) {
+
+    .iconoMenu {
+        flex-direction: column;
+    }
+
+    .iconoMenu h6 {
+        margin: 0;
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 359px) {
+    
+    #sociedad ul.listaRoles {
+        transform: scale(0.8);
+    }
+
+}

@@ -1,0 +1,61 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/fondoArena3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+main img {
+    margin-bottom: 50px;
+}
+
+main button {
+    font-family: 'Roboto', sans-serif;
+    width: 290px;
+    height: 40px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button:active, button:focus {
+    outline: none
+}
+
+main .nota {
+    width: 290px;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    margin-top: 8px;
+}
+
+main a {
+    margin-top: 48px;
+}
+
+main a span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,404 @@
+/* Generales */
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    background-color: #E6D09A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    user-select: none;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo */
+
+#imagenFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/fondoAlmacen.jpg");
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#colorFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #E6D09A;
+    z-index: -2;
+}
+
+#menuFondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -3;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h4 {
+    margin-left: 40px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+header img {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* Panel info */
+
+#info {
+    position: absolute;
+    width: 80vw;
+    padding: 30px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    z-index: 15;
+    display: none;
+}
+
+#info #cerrarInfo {
+    position: absolute;
+    padding: 10px;
+    background-color: #984E15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+footer > ul#menuPrincipal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconoMenu {
+    flex-basis: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 25vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.iconoMenu h6 {
+    margin-left: 10px;
+    font-size: 16px;
+    color: black;
+    opacity: 0.3;
+}
+
+.iconoMenu#almacen h6 {
+    color: #984E15;
+    opacity: 1;
+}
+
+
+/* Menú extra */
+
+li.iconoMenu#menuMas {
+    background-color: #984E15;
+    position: relative;
+    transform-origin: right top;
+}
+
+ul#menuExtra {
+    padding: 0;
+    transform-origin: right bottom;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    right: 0;
+    margin: 0;
+    bottom: 55px;
+    display: none;
+}
+
+ul#menuExtra li {
+    list-style: none;
+    font-size: 16px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    border-bottom: none;
+    width: 25vw;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul#menuExtra a li:hover {
+    background-color: #E6D09A;
+}
+
+ul#menuExtra a {
+    text-decoration: none;
+    color: #984E15;
+}
+
+
+/* RECURSOS */
+
+/* Caja recursos */
+
+section#recursos ul.listaRecursos {
+    padding: 50px 0 0 30px;
+    color: #984E15;
+}
+
+section#recursos ul.listaRecursos li.recurso {
+    display: flex;
+    position: relative;
+}
+
+section#recursos ul.listaRecursos li.recurso ul {
+    list-style: none;
+    background-color: white;
+    height: 60px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.mostrarRecurso {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    border: 1.5px solid #984E15;
+    margin: 0;
+    margin-right: 20px;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.mostrarRecurso li {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.mostrarRecurso li.imagenRecurso {
+    border-right: 1px solid #984E15;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.mostrarRecurso li.cantidadRecurso {
+    font-size: 28px;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso {
+    width: 150px;
+    display: flex;
+    padding: 0;
+    border: 1.5px solid #984E15;
+}
+
+section#recursos ul.listaRecursos li.recurso#trigo ul.variarRecurso {
+    width: 100px;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual {
+    width: 100px;
+    display: flex;
+}
+
+section#recursos ul.listaRecursos li.recurso#trigo ul.variarRecurso .variarManual {
+    width: 100%;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual input {
+    width: 60px;
+    color: #984E15;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Alegreya Sans', sans-serif;
+    -webkit-appearance: none;
+    border: none;
+    margin: 2px;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual input:active, section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual input:focus {
+    outline: none;
+} 
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual .botonesManual {
+    width: 40px;
+    border-right: 1.5px solid #984E15;
+    border-left: 1px solid #984E15;
+}
+
+section#recursos ul.listaRecursos li.recurso#trigo ul.variarRecurso .variarManual .botonesManual {
+    border-right: none;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual .botonesManual > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual .botonesManual div.aumentarRecurso {
+    height: 35px;
+    border-bottom: 1px solid #984E15;
+}
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarManual .botonesManual div.disminuirRecurso {
+    height: 25px;
+}
+
+
+section#recursos ul.listaRecursos li.recurso ul.variarRecurso .variarAuto {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Título recurso */
+
+section#recursos ul.listaRecursos li.recurso h3.nombreRecurso {
+    font-size: 18px;
+    color: #984E15;
+    position: absolute;
+    top: -28px;
+    margin: 0;
+    transform-origin: 0 0;
+}
+
+/* Título categoría */
+
+section#recursos ul.listaRecursos li.recurso h2.categoriaRecurso {
+    font-size: 18px;
+    color: #984E15;
+    position: absolute;
+    transform: rotate(270deg);
+    bottom: 60px;
+    left: 5px;
+    transform-origin: left bottom;
+    margin: 0;
+}
+
+section#recursos ul.listaRecursos li.recurso h2.categoriaRecurso hr {
+    background-color: #984E15;
+    display: block;
+    margin-top: 0.15em;
+    margin-bottom: 1.25em;
+    height: 2px;
+    border: 0;
+}
+
+section#recursos ul.listaRecursos li.recurso#trigo h2.categoriaRecurso hr {
+    width: 90px;
+}
+
+section#recursos ul.listaRecursos li.recurso#oro h2.categoriaRecurso hr {
+    width: 325px;
+}
+
+
+/* Media queries - RWD */
+
+@media (max-width: 900px ) {
+
+    .iconoMenu ul#menuExtra li {
+        width: 100vw;
+    }
+
+    .iconoMenu ul#menuExtra a:last-of-type li {
+        border-bottom: 1.5px solid #984E15;
+    }
+
+}
+
+
+@media (max-width: 550px ) {
+
+    .iconoMenu {
+        flex-direction: column;
+    }
+
+    .iconoMenu h6 {
+        margin: 0;
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 359px) {
+
+    section#recursos {
+        transform: scale(0.8);
+    }
+
+}

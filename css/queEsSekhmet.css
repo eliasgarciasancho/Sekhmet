@@ -1,0 +1,275 @@
+/* Generales */
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+/* Fondo */
+
+#colorFondo {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: -2;
+}
+
+#menuFondo {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -3;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 3px -1px 6px #888888;
+}
+
+footer > ul#menuPrincipal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconoMenu {
+    flex-basis: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 25vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+footer #menuPrincipal a {
+    text-decoration: none;
+}
+
+footer #menuPrincipal a:hover {
+    text-decoration: none;
+}
+
+footer #menuPrincipal a h6 {
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    opacity: 0.3;
+}
+
+
+/* Menú extra */
+
+li.iconoMenu#menuMas {
+    background-color: #984E15;
+    position: relative;
+    transform-origin: right top;
+}
+
+ul#menuExtra {
+    padding: 0;
+    transform-origin: right bottom;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    right: 0;
+    margin: 0;
+    bottom: 55px;
+    display: none;
+}
+
+ul#menuExtra li {
+    list-style: none;
+    font-size: 16px;
+    background-color: white;
+    border: 1.5px solid #984E15;
+    border-bottom: none;
+    width: 25vw;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul#menuExtra a:first-of-type li {
+    background-color: #E6D09A;
+    color: #984E15;
+}
+
+ul#menuExtra a li:hover {
+    background-color: #E6D09A;
+}
+
+ul#menuExtra a {
+    text-decoration: none;
+    color: #984E15;
+}
+
+/* CONTENIDO */
+
+/* Imagen */
+
+section {
+    height: calc(100vh - 55px);
+}
+
+section > .row {
+    height: calc(100vh - 55px);
+}
+
+section .imagen {
+    background-image: url('../img/fotoQueEs.png');
+    background-position: center;
+    background-size: cover;
+}
+
+section.imagen#imagenDesktop {
+    height: calc(100vh - 55px);
+}
+
+section .imagen#imagenMovil {
+    height: 240px;
+    margin-top: 55px;
+}
+
+section header {
+    background-color: #505050;
+    opacity: 1;
+    color: white;
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    padding-left: 35px;
+    z-index: 10;
+}
+
+section header > div {
+    font-size: 20px;
+}
+
+section aside {
+    padding: 35px;
+    padding-top: 75px;
+    margin-bottom: 55px;
+}
+
+section aside > div {
+    overflow: auto;
+    height: calc(100vh - 160px);
+    padding: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: justify;
+}
+
+section aside > div p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* Personalizar scrollbar */
+
+    /* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+/* Media queries - RWD */
+
+@media (max-width: 900px ) {
+
+    .iconoMenu ul#menuExtra li {
+        width: 100vw;
+    }
+
+    .iconoMenu ul#menuExtra a:last-of-type li {
+        border-bottom: 1.5px solid #984E15;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body {
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    section aside {
+        padding: 25px;
+    }
+
+    section aside > div {
+        overflow: visible;
+        height: auto;
+        text-align: left;
+    }
+
+    section header > div {
+        padding-left: 5px !important;
+    }
+
+}
+
+
+@media (max-width: 550px ) {
+
+    .iconoMenu {
+        flex-direction: column;
+    }
+    
+    footer #menuPrincipal a h6 {
+        margin: 0;
+        margin-top: 3px;
+        font-size: 10px;
+    }
+}

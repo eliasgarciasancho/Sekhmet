@@ -1,0 +1,69 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/fondoPrincipal.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+main img {
+    margin-top: 30vh;
+}
+
+main .entrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
+main .entrar button {
+    font-family: 'Roboto', sans-serif;
+    width: 290px;
+    height: 40px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+    cursor: pointer;
+}
+
+button:active, button:focus {
+    outline: none
+}
+
+main .entrar a {
+    margin-top: 16px;
+}
+
+main .entrar a span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+@media (max-width: 575px) {
+
+main .entrar {
+    margin-bottom: 8vh;
+}
+
+}
