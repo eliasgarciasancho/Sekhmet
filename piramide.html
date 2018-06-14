@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pirámide - Sekhmet</title>
+    <link rel="stylesheet" href="css/piramide.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="imagenFondo"></div>
+        <div id="colorFondo"></div>
+        <div id="menuFondo"></div>
+        <header>
+            <h4 id="nombrePartida">Partida cargada</h4>
+            <img src="img/info.png" alt="Información partida" id="infoTrigger">
+        </header>
+        <div id="info">
+            En esta pantalla podrás comprobar el coste y adquirir cada uno de los objetos de la pirámide. Tan sólo clicka sobre cada objeto y si reúnes las condiciones ya podrá ser tuyo. Completa la pirámide y ¡habrás ganado!            <div id="cerrarInfo"><img src="img/cerrarInfo.png" alt="Cerrar info"></div>
+        </div>
+        <footer>
+            <ul id="menuPrincipal">
+                <a href="almacen.html" id="almacen"> <li class="iconoMenu">  <img src="img/almacenInactivo.png" alt="Almacén">              
+                <h6>Almacén</h6>
+                </li> </a>
+                <a href="poblacion.html" id="poblacion"> <li class="iconoMenu"> <img src="img/poblacionInactivo.png" alt="Sociedad"> 
+                <h6>Población</h6>
+                </li> </a>
+                <li class="iconoMenu" id='piramide'><img src="img/piramideActivo.png" alt="Pirámide">
+                <h6>Pirámide</h6>
+                </li>
+                <li class="iconoMenu" id=menuMas><img src="img/masOpciones.png" alt="Más opciones">
+                    <ul id="menuExtra">
+                        <a href="queEsSekhmet.html"><li>¿Qué es Sekhmet?</li></a>
+                        <a href="comoJugar.html"><li>¿Cómo jugar?</li></a>
+                        <a href="empezarPartida.html"><li>Reiniciar partida</li></a>
+                        <a href="index.html"><li>Cerrar sesión</li></a>
+                    </ul>
+                </li>
+            </ul>     
+        </footer>
+        <section id="piramide">
+            <div class="item" id="mascara">
+                <img src="img/mascara.png" alt="máscara faraón">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="cruz">
+                <img src="img/cruz.png" alt="cruz">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="ojo">
+                <img src="img/ojo.png" alt="ojo">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="testamento">
+                <img src="img/testamento.png" alt="testamento">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="papiro">
+                <img src="img/papiro.png" alt="papiro">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="lapida">
+                <img src="img/lapida.png" alt="lapida">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="anfora">
+                <img src="img/anfora.png" alt="anfora">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="flor">
+                <img src="img/flor.png" alt="flor">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="alfombra">
+                <img src="img/alfombra.png" alt="alfombra">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+            <div class="item" id="varas">
+                <img src="img/varas.png" alt="varas">
+                <div class="tick"><img src="img/tickOscuro.png" alt="item adquirido"></div>
+            </div>
+        </section>
+
+        <section id="panel" class="infoInicial"> 
+            <h5>Aquí se mostrará la información de los ítems al pulsar sobre cada uno de ellos</h5>
+            <div id="adquirirItem">
+                <div id="imagenItem">
+                    <img src="" alt="">
+                    <h2></h2>
+                </div>
+                <div id="piedra">
+                    <img src="img/piedraPiramide.png" alt="cantidad piedra">
+                    <h4></h4>
+                </div>
+                <div id="madera">
+                    <img src="img/maderaPiramide.png" alt="cantidad madera">
+                    <h4></h4>
+                </div>
+                <div id="oro">
+                    <img src="img/oroPiramide.png" alt="cantidad oro">
+                    <h4></h4>
+                </div>
+                <div id="rol">
+                    <img src="./img/artesanosIcono.png" alt="cantidad artesanos">
+                    <h6></h6>
+                    <h4></h4>
+                </div>
+                <div id="botonContainer">
+                    <div id="boton">
+                        <img src="img/tickAdquirirItem.png" alt="Adquirir ítem">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="js/piramide.js"></script>
+</body>
+</html>

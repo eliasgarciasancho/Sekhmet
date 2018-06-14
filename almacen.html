@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Almacén - Sekhmet</title>
+    <link rel="stylesheet" href="css/almacen.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+</head>
+<body>
+    <main>   
+        <div id="imagenFondo"></div>
+        <div id="colorFondo"></div>
+        <div id="menuFondo"></div>
+        <header>
+            <h4 id="nombrePartida">Partida cargada</h4>
+            <img src="img/info.png" alt="Información partida" id="infoTrigger">
+        </header>
+        <div id="info">
+            En esta pantalla podrás comprobar a la izquierda la cantidad de cada recurso que se tiene. A la derecha podrás modificar la cantidad de recursos disponibles, bien manual o automáticamente. Para hacerlo de forma manual simplemente escribe la cantidad y clicka sobre “+” o “-“ para aumentar o disminuir respectivamente. El botón “Auto” se utiliza para, una vez se ha tirado el dado de recurso, aumentar de forma automática la cantidad de trigo y recurso de tipo cantera obtenido en el dado.
+            <div id="cerrarInfo"><img src="img/cerrarInfo.png" alt="Cerrar info"></div>
+        </div>
+        <footer>
+            <ul id="menuPrincipal">
+                <li class="iconoMenu" id='almacen'> <img src="img/almacenActivo.png" alt="Almacén">               
+                <h6>Almacén</h6>
+                </li>
+                <a href="poblacion.html" id='poblacion'><li class="iconoMenu"><img src="img/poblacionInactivo.png" alt="Sociedad">
+                <h6>Población</h6>
+                </li> </a>
+                <a href="piramide.html" id="piramide"><li class="iconoMenu"><img src="img/piramideInactivo.png" alt="Pirámide">
+                <h6>Pirámide</h6>
+                </li> </a>
+                <li class="iconoMenu" id=menuMas><img src="img/masOpciones.png" alt="Más opciones">
+                    <ul id="menuExtra">
+                        <a href="queEsSekhmet.html"><li>¿Qué es Sekhmet?</li></a>
+                        <a href="comoJugar.html"><li>¿Cómo jugar?</li></a>
+                        <a href="empezarPartida.html"><li>Reiniciar partida</li></a>
+                        <a href="index.html"><li>Cerrar sesión</li></a>
+                    </ul>
+                </li>
+            </ul>     
+        </footer>
+        <section id="recursos">
+            <ul class="listaRecursos">
+
+                <li class="recurso" id="trigo">   
+                    <ul class="mostrarRecurso">
+                        <li class="imagenRecurso"> <img src="img/trigoAlmacen.png" alt="trigo"></li>
+                        <li class="cantidadRecurso" id="cantidadTrigo"></li>
+                    </ul>
+                    <ul class="variarRecurso">
+                        <li class="variarManual">
+                            <input type="number">
+                            <div class="botonesManual">
+                                <div class="aumentarRecurso" id="aumentarTrigo"><img src="img/aumentarRecursos.png" alt="aumentar recursos"></div>
+                                <div class="disminuirRecurso" id="disminuirTrigo"><img src="img/disminuirRecursos.png" alt="disminuir recursos"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <h3 class="nombreRecurso">Trigo</h3>
+                    <h2 class="categoriaRecurso">Despensa <hr noshade> </h2>
+                </li>
+
+                <li class="recurso" id="piedra">   
+                    <ul class="mostrarRecurso">
+                        <li class="imagenRecurso"> <img src="img/piedraAlmacen.png" alt="piedra"></li>
+                        <li class="cantidadRecurso" id="cantidadPiedra"></li>
+                    </ul>
+                    <ul class="variarRecurso">
+                        <li class="variarManual">
+                            <input type="number">
+                            <div class="botonesManual">
+                                <div class="aumentarRecurso" id="aumentarPiedra"><img src="img/aumentarRecursos.png" alt="aumentar recursos"></div>
+                                <div class="disminuirRecurso" id="disminuirPiedra"><img src="img/disminuirRecursos.png" alt="disminuir recursos"></div>
+                            </div>
+                        </li>
+                        <li class="variarAuto" id="autoPiedra">AUTO</li>
+                    </ul>
+                    <h3 class="nombreRecurso">Piedra</h3>
+                </li>
+
+                <li class="recurso" id="madera">   
+                    <ul class="mostrarRecurso">
+                        <li class="imagenRecurso"> <img src="img/maderaAlmacen.png" alt="madera"></li>
+                        <li class="cantidadRecurso" id="cantidadMadera"></li>
+                    </ul>
+                    <ul class="variarRecurso">
+                        <li class="variarManual">
+                            <input type="number">
+                            <div class="botonesManual">
+                                <div class="aumentarRecurso" id="aumentarMadera"><img src="img/aumentarRecursos.png" alt="aumentar recursos"></div>
+                                <div class="disminuirRecurso" id="disminuirMadera"><img src="img/disminuirRecursos.png" alt="disminuir recursos"></div>
+                            </div>
+                        </li>
+                        <li class="variarAuto" id="autoMadera">AUTO</li>
+                    </ul>
+                    <h3 class="nombreRecurso">Madera</h3>
+                </li>
+
+                <li class="recurso" id="oro">   
+                    <ul class="mostrarRecurso">
+                        <li class="imagenRecurso"> <img src="img/oroAlmacen.png" alt="oro"></li>
+                        <li class="cantidadRecurso" id="cantidadOro"></li>
+                    </ul>
+                    <ul class="variarRecurso">
+                        <li class="variarManual">
+                            <input type="number">
+                            <div class="botonesManual">
+                                <div class="aumentarRecurso" id="aumentarOro"><img src="img/aumentarRecursos.png" alt="aumentar recursos"></div>
+                                <div class="disminuirRecurso" id="disminuirOro"><img src="img/disminuirRecursos.png" alt="disminuir recursos"></div>
+                            </div>
+                        </li>
+                        <li class="variarAuto" id="autoOro">AUTO</li>
+                    </ul>
+                    <h3 class="nombreRecurso">Oro</h3>
+                    <h2 class="categoriaRecurso">Cantera <hr noshade> </h2>
+                </li>
+                
+            </ul>        
+        </section>     
+    </main>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="js/almacen.js"></script>
+</body>
+</html>

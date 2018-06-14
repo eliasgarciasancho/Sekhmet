@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sociedad - Sekhmet</title>
+    <link rel="stylesheet" href="css/poblacion.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="imagenFondo"></div>
+        <div id="colorFondo"></div>
+        <div id="menuFondo"></div>
+        <header>
+            <h4 id="nombrePartida">Partida cargada</h4>
+            <img src="img/info.png" alt="Información partida" id="infoTrigger">
+        </header>
+        <div id="info">
+            En esta pantalla podrás comprobar la cantidad de cada tipo de rol que posees. Cada rol dispone de un menú desplegable en el cuál podrás comprobar el coste de cada rol y aumentar o disminuir su cantidad.            <div id="cerrarInfo"><img src="img/cerrarInfo.png" alt="Cerrar info"></div>
+        </div>
+        <footer>
+            <ul id="menuPrincipal">
+                <a href="almacen.html" id="almacen"> <li class="iconoMenu"> <img src="img/almacenInactivo.png" alt="Almacén">                
+                <h6>Almacén</h6>
+                </li> </a>   
+                <li class="iconoMenu" id="sociedad"><img src="img/poblacionActivo.png" alt="Sociedad">
+                <h6>Población</h6>
+                </li>
+                <a href="piramide.html" id="piramide"> <li class="iconoMenu"><img src="img/piramideInactivo.png" alt="Pirámide">
+                <h6>Pirámide</h6>
+                </li> </a>
+                <li class="iconoMenu" id=menuMas><img src="img/masOpciones.png" alt="Más opciones">
+                    <ul id="menuExtra">
+                        <a href="queEsSekhmet.html"><li>¿Qué es Sekhmet?</li></a>
+                        <a href="comoJugar.html"><li>¿Cómo jugar?</li></a>
+                        <a href="empezarPartida.html"><li>Reiniciar partida</li></a>
+                        <a href="index.html"><li>Cerrar sesión</li></a>
+                    </ul>
+                </li>
+            </ul>     
+        </footer>
+        <section id="sociedad">
+            <ul class="listaRoles">
+                <li class="rol" id="faraon">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/1faraon.png" alt="faraon"></li>
+                        <li class="nombreRol">Faraón</li>
+                        <li class="cantidadRol" id="cantidadFaraones"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarFaraon">
+                                    <div class="disminuirRol" id="disminuirFaraon"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarFaraon"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rol" id="sacerdotes">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/2sacerdotes.png" alt="sacerdotes"></li>
+                        <li class="nombreRol">Sacerdotes</li>
+                        <li class="cantidadRol" id="cantidadSacerdotes"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo" id="desplegableTrigoSacerdotes">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra" id="desplegablePiedraSacerdotes">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera" id="desplegableMaderaSacerdotes">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro" id="desplegableOroSacerdotes">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarSacerdotes">
+                                    <div class="disminuirRol" id="disminuirSacerdotes"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarSacerdotes"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rol" id="escribanos">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/3escribanos.png" alt="escribanos"></li>
+                        <li class="nombreRol">Escribanos</li>
+                        <li class="cantidadRol" id="cantidadEscribanos"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarEscribanos">
+                                    <div class="disminuirRol" id="disminuirEscribanos"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarEscribanos"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rol" id="artesanos">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/4artesanos.png" alt="artesanos"></li>
+                        <li class="nombreRol">Artesanos</li>
+                        <li class="cantidadRol" id="cantidadArtesanos"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarArtesanos">
+                                    <div class="disminuirRol" id="disminuirArtesanos"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarArtesanos"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rol" id="soldados">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/5soldados.png" alt="soldados"></li>
+                        <li class="nombreRol">Soldados</li>
+                        <li class="cantidadRol" id="cantidadSoldados"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarSoldados">
+                                    <div class="disminuirRol" id="disminuirSoldados"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarSoldados"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rol" id="campesinos">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/6campesinos.png" alt="campesinos"></li>
+                        <li class="nombreRol">Campesinos</li>
+                        <li class="cantidadRol" id="cantidadCampesinos"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarCampesinos">
+                                    <div class="disminuirRol" id="disminuirCampesinos"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarCampesinos"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rol" id="esclavos">   
+                    <ul class="elementosRol">
+                        <li class="imagenRol"> <img src="img/7esclavos.png" alt="esclavos"></li>
+                        <li class="nombreRol">Esclavos</li>
+                        <li class="cantidadRol" id="cantidadEsclavos"></li>
+                        <li class="desplegableRol"> <img src="img/desplegarRecurso.png" alt="desplegar rol"> 
+                            <ul class="extraRol">
+                                <li class="desplegableRecurso" id="desplegableTrigo">
+                                    <img src="img/trigoPoblacion.png" alt="trigo">
+                                    <h6 class="cantidadRecurso" id="cantidadTrigo"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegablePiedra">
+                                    <img src="img/piedraPoblacion.png" alt="piedra">
+                                    <h6 class="cantidadRecurso" id="cantidadPiedra"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableMadera">
+                                    <img src="img/maderaPoblacion.png" alt="madera">
+                                    <h6 class="cantidadRecurso" id="cantidadMadera"></h6>
+                                </li>
+                                <li class="desplegableRecurso" id="desplegableOro">
+                                    <img src="img/oroPoblacion.png" alt="oro">
+                                    <h6 class="cantidadRecurso" id="cantidadOro"></h6>
+                                </li>
+                                <li class="gestionarRol" id="gestionarEsclavos">
+                                    <div class="disminuirRol" id="disminuirEsclavos"><img src="img/menosRecursos.png" alt="quitar faraón"></div>
+                                    <div class="aumentarRol" id="aumentarEsclavos"><img src="img/masRecursos.png" alt="añadir faraón"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>       
+        </section>     
+    </main>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="js/poblacion.js"></script>
+</body>
+</html>
